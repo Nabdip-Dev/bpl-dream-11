@@ -1,21 +1,25 @@
 import React from 'react';
 import navlogo from '../../assets/logo.png'
+import dollarImg from '../../assets/dollar_1.png'
 const Navbar = () => {
     return (
-        <div className="navbar bg-base-100 shadow-sm">
+        <div className="navbar bg-base-100 container mx-auto">
             <div className="flex-1">
                 <img src={navlogo} alt="" />
             </div>
-            <div className="flex gap-2">
-               
-                <div className="dropdown dropdown-end">
-                    <div tabIndex={0} role="button" className="btn btn-ghost btn-circle avatar">
-                        
-                    </div>
-                    <ul tabIndex="-1"
-                        className="menu menu-sm dropdown-content bg-base-100 rounded-box z-1 mt-3 w-52 p-2 shadow">
+            <div className="flex gap-4 items-center">
+                <div>
+                    <ul className='flex gap-4'>
+                        <li className='text-[#131313]'>Home</li>
+                        <li className='text-[#131313]'>Fixture</li>
+                        <li className='text-[#131313]'>Teams</li>
+                        <li className='text-[#131313]'>Schedules</li>
                     </ul>
                 </div>
+                <button className='btn font-bold'>
+                    0 Coin
+                    <img src={dollarImg} alt="" />
+                </button>
             </div>
         </div>
     );
